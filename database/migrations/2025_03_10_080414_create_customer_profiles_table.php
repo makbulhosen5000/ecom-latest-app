@@ -30,7 +30,7 @@ return new class extends Migration
             $table->string('ship_phone',50);
            
             $table->unsignedBigInteger('user_id')->unique();
-            $table->foreign('user_id')->references('id')->on('users')->restrictOnDelete()->cascadeOnDelete();
+            $table->foreign('user_id')->references(columns: 'id')->on('users')->restrictOnDelete()->cascadeOnUpdate();
            
            
             $table->timestamp('created_at')->useCurrent();
