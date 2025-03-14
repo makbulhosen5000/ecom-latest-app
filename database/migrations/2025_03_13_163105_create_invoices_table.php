@@ -14,10 +14,12 @@ return new class extends Migration
         Schema::create('invoices', function (Blueprint $table) {
             $table->id();
             $table->string(column: 'total');
+            $table->string(column: 'discount');
             $table->string('vat');
             $table->string('payable');
             $table->string('cost_details');
             $table->string('ship_details');
+            $table->string('shipping_method');
             $table->string('tran_id');
             $table->string('val_id')->default(0);
             $table->enum('delivery_status',['success','processing','completed']);
