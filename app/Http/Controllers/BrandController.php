@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helper\ResponseHelper as HelperResponseHelper;
 use App\Models\Brand;
 use Illuminate\Http\Request;
 
@@ -10,9 +11,10 @@ class BrandController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function brandList()
     {
-        //
+        $data = Brand::all();
+        return HelperResponseHelper::Out('success',$data,200);
     }
 
     /**

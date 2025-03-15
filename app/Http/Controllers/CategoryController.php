@@ -4,16 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Helper\ResponseHelper as HelperResponseHelper;
 
 class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function categoryList()
     {
-        //
+        $data = Category::all();
+        return HelperResponseHelper::Out('success',$data,200);
     }
+
 
     /**
      * Show the form for creating a new resource.
