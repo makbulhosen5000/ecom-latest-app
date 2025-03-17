@@ -36,8 +36,8 @@ Route::get('/listProductByBrand/{id}',[ProductController::class,'listProductByBr
 //Product List By Remark
 Route::get('/listProductByRemark/{remark}',[ProductController::class,'listProductByRemark']);
 
-//Product List By Slider
-Route::get('/listProductBySlider',[ProductController::class,'listProductBySlider']);
+//Product List Slider
+Route::get('/listProductSlider',[ProductController::class,'listProductSlider']);
 
 //Product Details
 Route::get('/productDetailsById/{id}',[ProductController::class,'productDetailsById']);
