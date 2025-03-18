@@ -36,8 +36,8 @@ class ProductController extends Controller
         return ResponseHelper::Out('success',$data,200);
     }
     public function listReviewByProduct(Request $request){
-        $data = ProductReview::where(column: 'product_id',$request->product_id)
-        ->with(relations: ['customerProfile'=>function($query){
+        $data=ProductReview::where('product_id',$request->product_id)
+        ->with(['profile'=>function($query){
             $query->select('id','cus_name');
         }])->get();
         return ResponseHelper::Out('success',$data,200);

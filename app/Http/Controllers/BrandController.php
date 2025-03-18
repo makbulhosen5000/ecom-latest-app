@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
-=
-
-use App\Helper\ResponseHelper;
 use App\Models\Brand;
+use App\Helper\ResponseHelper;
 
 class BrandController extends Controller
 {
@@ -17,5 +15,4 @@ class BrandController extends Controller
         $data = Brand::all();
         return ResponseHelper::Out('success',$data,200);
     }
-   
 }

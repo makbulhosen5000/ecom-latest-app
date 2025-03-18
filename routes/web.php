@@ -4,6 +4,7 @@ use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PolicyController;
 use App\Http\Controllers\ProductController;
+use App\Models\Brand;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,7 +29,7 @@ Route::get('/brandList',[BrandController::class,'brandList']);
 Route::get('/categoryList',[CategoryController::class,'categoryList']);
 
 //Product List By Category
-Route::get('/listProductByCategory/{id}',[ProductController::class,'listProductCyCategory']);
+Route::get('/listProductByCategory/{id}',[ProductController::class,'listProductByCategory']);
 
 //Product List By Brand
 Route::get('/listProductByBrand/{id}',[ProductController::class,'listProductByBrand']);
